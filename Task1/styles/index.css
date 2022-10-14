@@ -1,0 +1,146 @@
+@font-face {
+	font-family: "YS Text";
+	src: url(../fonts/text-regular.woff2);
+	font-weight: normal;
+}
+@font-face {
+	font-family: "YS Text";
+	src: url(../fonts/text-bold.woff2);
+	font-weight: bold;
+}
+
+* {
+	font-family: 'YS Text', 'Helvetica Neue', Arial, sans-serif;
+}
+:root {
+	--c-input: #FFC93D;
+}
+
+html {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+body {
+	height: 100%;
+	width: 100%;
+	max-width: 900px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+
+a {
+	text-decoration: none;
+	text-decoration-skip-ink: none;
+	color: #0a61ba;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.footer {
+	margin: 2em;
+	font-size: 0.8rem;
+}
+.footer a {
+	margin-right: 1em;
+	color: gray;
+}
+
+.root {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.page {
+	width: 100%;
+	display: flex;
+	gap: 1em;
+	padding: 1em;
+}
+@media (max-width: 700px) {
+	.page {
+		flex-direction: column;
+	}
+	.logo {
+		align-self: center;
+	}
+}
+.block {
+	margin-bottom: 2em;
+}
+
+.logo {
+	width: 110px;
+}
+.logo img {
+	width: 100%;
+}
+.content {
+	flex-grow: 1;
+}
+
+.input {
+	display: flex;
+	height: 2.8em;
+}
+.input > * {
+	font-size: 1.16rem;
+}
+.input input {
+	position: relative;
+	flex-grow: 1;
+	padding: 0.5em;
+	border: 2px solid var(--c-input);
+	border-radius: 0.5em 0.3em 0.3em 0.5em;
+}
+.input button {
+	background-color: var(--c-input);
+	border: 2px solid var(--c-input);
+	border-radius:  0 0.5em 0.5em 0;
+	padding: 0.5em 1em;
+	margin-left: -0.3em;
+}
+.input button:hover {
+	text-decoration: underline;
+}
+.input button:active {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+p {
+	font-size: 0.95rem;
+	margin-top: 0.5em;
+}
+
+.links {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 0;
+	font-size: 0.95rem;
+}
+@media (max-width: 580px) {
+	.links {
+		grid-template-columns: 1fr;
+	}
+}
+.links li {
+	list-style: none;
+	padding: 0.4em 0;
+}
+
+.icon {
+	width: 1em;
+	display: inline-block;
+}
+.icon img {
+	width: 100%;
+}
