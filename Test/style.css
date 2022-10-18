@@ -1,0 +1,26 @@
+* {
+	font-size: 1.5rem;
+}
+
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul {
+	padding-left: 0;
+}
+li {
+	padding-left: 1em;
+	list-style: none;
+	background-image: var(--img);
+	background-size: 0.8em;
+	background-repeat: no-repeat;
+	background-position: 0% 0.15em;
+}
