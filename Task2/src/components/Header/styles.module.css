@@ -1,0 +1,22 @@
+.header {
+	height: 67px;
+	background-color: #000000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	box-sizing: border-box;
+}
+
+.title {
+	margin: 0;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 27px;
+	color: #FFFFFF;
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+}
