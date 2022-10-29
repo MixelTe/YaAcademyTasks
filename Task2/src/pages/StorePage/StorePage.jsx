@@ -1,6 +1,22 @@
-export const StorePage = () =>
+import { useState } from "react"
+import { BookCategories } from "../../components/BookCategories/BookCategories"
+import { BookList } from "../../components/BookList/BookList"
+import { Card } from "../../components/Card/Card"
+import styles from "./styles.module.css"
+
+
+export const StorePage = ({ books, categories }) =>
 {
-	return <main>
-		Страница с каталогом
+	const [activeCategory, setActiveCategory] = useState(1);
+
+	return <main className={styles.main}>
+		<Card className={styles.panel}>
+			<BookCategories
+				categories={categories}
+				activeCategory={activeCategory}
+				setActiveCategory={setActiveCategory}
+			/>
+		</Card>
+		<BookList books={books.filter(book => book.category === activeCategory)} />
 	</main>
 }

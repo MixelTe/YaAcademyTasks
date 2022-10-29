@@ -1,0 +1,15 @@
+.main {
+	background-color: #E9E9E9;
+	flex-grow: 1;
+	padding: 51px 40px 0 40px;
+	display: grid;
+	grid-template-columns: 300px auto;
+	gap: 20px;
+	box-sizing: border-box;
+	max-height: calc(100% - 67px);
+}
+
+.panel {
+	padding-top: 8px;
+	margin-bottom: 55px;
+}

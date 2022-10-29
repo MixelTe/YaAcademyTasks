@@ -1,0 +1,15 @@
+.star {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: transparent;
+	border: 2px solid currentColor;
+	box-sizing: border-box;
+	margin-right: 7px;
+	border-radius: 4px;
+}
+
+.star_active {
+	background-color: currentColor;
+}
+
