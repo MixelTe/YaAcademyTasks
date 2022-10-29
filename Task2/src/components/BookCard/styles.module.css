@@ -1,5 +1,6 @@
 .root {
 	display: flex;
+	padding-top: 16px;
 }
 
 .content {
@@ -12,7 +13,7 @@
 	font-size: 20px;
 	line-height: 27px;
 	margin: 0;
-	margin-bottom: 22px;
+	margin-bottom: 16px;
 }
 
 .descripion {
@@ -21,7 +22,7 @@
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 22px;
-	margin-bottom: 22px;
+	margin-bottom: 14px;
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
