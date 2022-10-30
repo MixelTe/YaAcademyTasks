@@ -3,7 +3,7 @@ import { classnames } from "../../classnames"
 import styles from "./styles.module.css"
 
 
-export const CountInput = () =>
+export function CountInput()
 {
 	const [count, setCount] = useState(0);
 

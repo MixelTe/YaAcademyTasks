@@ -1,6 +1,6 @@
 import { Header } from "../Header/Header"
 
-export const Layout = ({ children }) =>
+export function Layout({ children })
 {
 	return <>
 		<Header />

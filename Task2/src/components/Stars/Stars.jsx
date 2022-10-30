@@ -2,7 +2,7 @@ import { classnames } from "../../classnames"
 import styles from "./styles.module.css"
 
 
-export const Stars = ({ count }) =>
+export function Stars({ count })
 {
 	return <div>
 		{

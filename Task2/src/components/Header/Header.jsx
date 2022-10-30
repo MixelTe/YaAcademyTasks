@@ -2,7 +2,7 @@ import styles from "./styles.module.css"
 import icon from "./shoppingCart.svg"
 
 
-export const Header = () =>
+export function Header()
 {
 	return <header className={styles.header}>
 		<h1 className={styles.title}>Магазин</h1>

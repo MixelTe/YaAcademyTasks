@@ -4,7 +4,7 @@ import { Stars } from "../Stars/Stars"
 import styles from "./styles.module.css"
 
 
-export const BookCard = ({book}) =>
+export function BookCard({ book })
 {
 	return <Card className={styles.root}>
 		<div className={styles.content}>
@@ -12,12 +12,12 @@ export const BookCard = ({book}) =>
 			<div className={styles.descripion}>
 				<p>{book.author}</p>
 				<p>{book.genre}</p>
-				<Stars count={book.rating}/>
+				<Stars count={book.rating} />
 			</div>
 			<div className={styles.price}>{book.price} &#x20bd;</div>
 		</div>
 		<div className={styles.countInput}>
-			<CountInput/>
+			<CountInput />
 		</div>
 	</Card>
 }

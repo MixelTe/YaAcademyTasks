@@ -1,4 +1,4 @@
-export const BookPage = () =>
+export function BookPage()
 {
 	return <div></div>
 }

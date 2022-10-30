@@ -2,7 +2,7 @@ import { classnames } from "../../classnames";
 import styles from "./styles.module.css"
 
 
-export const BookCategories = ({categories, activeCategory, setActiveCategory}) =>
+export function BookCategories({ categories, activeCategory, setActiveCategory })
 {
 	return <nav className={styles.root}>
 		{

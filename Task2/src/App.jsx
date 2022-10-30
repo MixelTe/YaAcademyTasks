@@ -3,7 +3,7 @@ import { StorePage } from "./pages/StorePage/StorePage"
 import { books, categories } from "./constants/mock"
 
 
-export const App = () =>
+export function App()
 {
 	return <Layout>
 		<StorePage categories={categories} books={books} />

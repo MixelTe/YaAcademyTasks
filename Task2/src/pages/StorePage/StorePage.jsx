@@ -5,7 +5,7 @@ import { Card } from "../../components/Card/Card"
 import styles from "./styles.module.css"
 
 
-export const StorePage = ({ books, categories }) =>
+export function StorePage({ books, categories })
 {
 	const [activeCategory, setActiveCategory] = useState(1);
 
