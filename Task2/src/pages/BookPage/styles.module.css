@@ -1,0 +1,27 @@
+.main {
+	background-color: #E9E9E9;
+	flex-grow: 1;
+	padding: 51px 40px;
+}
+
+.panel {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.annotation__title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.comments {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}

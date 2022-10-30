@@ -1,10 +1,11 @@
+import { classnames } from "../../classnames"
 import { Card } from "../Card/Card"
 import { CountInput } from "../CountInput/CountInput"
 import { Stars } from "../Stars/Stars"
 import styles from "./styles.module.css"
 
 
-export function BookCard({ book })
+export function BookCard({ book, inputOnBottom })
 {
 	return <Card className={styles.root}>
 		<div className={styles.content}>
@@ -16,7 +17,7 @@ export function BookCard({ book })
 			</div>
 			<div className={styles.price}>{book.price} &#x20bd;</div>
 		</div>
-		<div className={styles.countInput}>
+		<div className={classnames(styles.countInput, inputOnBottom ? styles.countInput_bottom : "")}>
 			<CountInput />
 		</div>
 	</Card>

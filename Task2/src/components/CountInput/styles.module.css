@@ -1,7 +1,7 @@
 .root {
 	width: 138px;
 	display: flex;
-	align-self: center;
+	align-items: center;
 	justify-content: space-between;
 }
 

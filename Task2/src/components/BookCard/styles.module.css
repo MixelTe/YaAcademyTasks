@@ -42,3 +42,6 @@
 	display: flex;
 	align-items: center;
 }
+.countInput_bottom {
+	align-items: flex-end;
+}

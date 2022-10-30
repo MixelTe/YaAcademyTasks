@@ -1,0 +1,10 @@
+.text {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	margin: 0;
+}
+.text:not(:last-child) {
+	margin-bottom: 8px;
+}
