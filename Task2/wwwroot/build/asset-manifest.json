@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/YaAcademyTasks/Task2/wwwroot/page2/static/css/main.106a5e24.css",
+    "main.js": "/YaAcademyTasks/Task2/wwwroot/page2/static/js/main.4895779f.js",
+    "static/media/shoppingCart.svg": "/YaAcademyTasks/Task2/wwwroot/page2/static/media/shoppingCart.56f7c5dd5928b21540812297d7d6a514.svg",
+    "static/media/plus.svg": "/YaAcademyTasks/Task2/wwwroot/page2/static/media/plus.843e846a4dcf48af1798.svg",
+    "index.html": "/YaAcademyTasks/Task2/wwwroot/page2/index.html",
+    "static/media/minus.svg": "/YaAcademyTasks/Task2/wwwroot/page2/static/media/minus.14dbb1539854042e6107.svg",
+    "main.106a5e24.css.map": "/YaAcademyTasks/Task2/wwwroot/page2/static/css/main.106a5e24.css.map",
+    "main.4895779f.js.map": "/YaAcademyTasks/Task2/wwwroot/page2/static/js/main.4895779f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.106a5e24.css",
+    "static/js/main.4895779f.js"
+  ]
+}
