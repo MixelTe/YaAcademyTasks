@@ -7,14 +7,14 @@ export function BookCategories({ categories, activeCategory, setActiveCategory }
 {
 	return <nav className={styles.root}>
 		{
-			categories.map(el =>
+			categories.map(category =>
 				<Link
-					to={"/" + el.id}
-					className={classnames(styles.item, activeCategory === el.id ? styles.item_selected : "")}
-					key={el.id}
-					onClick={() => setActiveCategory(el.id)}
+					to={"/" + category.id}
+					className={classnames(styles.item, activeCategory === category.id ? styles.item_selected : "")}
+					key={category.id}
+					onClick={() => setActiveCategory(category.id)}
 				>
-					{el.name}
+					{category.name}
 				</Link>
 			)
 		}

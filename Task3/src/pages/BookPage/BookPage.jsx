@@ -27,8 +27,8 @@ export function BookPage({ books })
 		</div>
 		<div className={styles.comments}>
 			{
-				book.comments.map((el, i) =>
-					<Comment key={i} comment={el} />
+				book.comments.map((comment, i) =>
+					<Comment key={i} comment={comment} />
 				)
 			}
 		</div>
