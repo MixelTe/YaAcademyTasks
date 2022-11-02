@@ -1,0 +1,17 @@
+.root {
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding-right: 5px;
+}
+
+.root::-webkit-scrollbar {
+	width: 7px;
+	background-color: transparent;
+	padding: 10px;
+}
+.root::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 4px;
+}
