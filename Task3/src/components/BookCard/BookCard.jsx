@@ -11,7 +11,7 @@ export function BookCard({ book, inputOnBottom, link })
 	return <Card className={styles.root}>
 		<div className={styles.content}>
 			{link ?
-				<Link className={styles.link} to={"/book/" + book.id}>
+				<Link className={styles.link} to={"/book/" + encodeURIComponent(book.id)}>
 					<h1 className={styles.title}>{book.title}</h1>
 				</Link>
 				:

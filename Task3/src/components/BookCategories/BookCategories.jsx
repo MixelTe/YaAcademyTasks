@@ -9,7 +9,7 @@ export function BookCategories({ categories, activeCategory, setActiveCategory }
 		{
 			categories.map(category =>
 				<Link
-					to={"/" + category.id}
+					to={"/" + encodeURIComponent(category.id)}
 					className={classnames(styles.item, activeCategory === category.id ? styles.item_selected : "")}
 					key={category.id}
 					onClick={() => setActiveCategory(category.id)}
