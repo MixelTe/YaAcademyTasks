@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { classnames } from "../../classnames"
 import { Card } from "../Card/Card"
 import { CountInput } from "../CountInput/CountInput"
@@ -5,11 +6,17 @@ import { Stars } from "../Stars/Stars"
 import styles from "./styles.module.css"
 
 
-export function BookCard({ book, inputOnBottom })
+export function BookCard({ book, inputOnBottom, link })
 {
 	return <Card className={styles.root}>
 		<div className={styles.content}>
-			<h1 className={styles.title}>{book.title}</h1>
+			{link ?
+				<Link className={styles.link} to={"/book/" + book.id}>
+					<h1 className={styles.title}>{book.title}</h1>
+				</Link>
+				:
+				<h1 className={styles.title}>{book.title}</h1>
+			}
 			<div className={styles.descripion}>
 				<p>{book.author}</p>
 				<p>{book.genre}</p>

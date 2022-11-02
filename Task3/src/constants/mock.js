@@ -1,18 +1,18 @@
 export const categories = [
-	{ name: "Художественная литература", id: 1 },
-	{ name: "Нехудожественная литература", id: 2 },
-	{ name: "Книги для детей", id: 3 },
-	{ name: "Переодические издания", id: 4 },
-	{ name: "Религия", id: 5 },
-	{ name: "Учебная литература", id: 6 },
-	{ name: "Комиксы", id: 7 },
+	{ name: "Художественная литература", id: "hud-lit" },
+	{ name: "Нехудожественная литература", id: "nehud-lit" },
+	{ name: "Книги для детей", id: "dly-detey" },
+	{ name: "Переодические издания", id: "pedogod" },
+	{ name: "Религия", id: "relig" },
+	{ name: "Учебная литература", id: "ucheb" },
+	{ name: "Комиксы", id: "komiks" },
 ]
 
 export const books = [
 	{
 		id: "1",
 		title: "Несносное проклятье некроманта",
-		category: 1,
+		category: "hud-lit",
 		author: "Блинова Маргарита",
 		genre: "Фэнтези",
 		rating: 4,
@@ -39,7 +39,7 @@ export const books = [
 	{
 		id: "2",
 		title: "Книга ночи",
-		category: 1,
+		category: "hud-lit",
 		author: "Блэк Холли",
 		genre: "Фэнтези",
 		rating: 4,
@@ -66,7 +66,7 @@ export const books = [
 	{
 		id: "3",
 		title: "Благие знамения",
-		category: 1,
+		category: "hud-lit",
 		author: "Пратчетт, Гейман",
 		genre: "Фэнтези",
 		rating: 4,
@@ -93,7 +93,7 @@ export const books = [
 	{
 		id: "4",
 		title: "Целительница. Первое испытание",
-		category: 1,
+		category: "hud-lit",
 		author: "Бульба Наталья Владимировна",
 		genre: "Фэнтези",
 		rating: 4,
@@ -120,7 +120,7 @@ export const books = [
 	{
 		id: "5",
 		title: "Lorem ipsum dolor",
-		category: 2,
+		category: "nehud-lit",
 		author: "Lorem ipsum",
 		genre: "Lorem",
 		rating: 5,
@@ -137,7 +137,7 @@ export const books = [
 	{
 		id: "6",
 		title: "Curabitur gravida",
-		category: 3,
+		category: "dly-detey",
 		author: "Lorem ipsum",
 		genre: "Lorem",
 		rating: 5,
@@ -154,7 +154,7 @@ export const books = [
 	{
 		id: "7",
 		title: "Maecenas volutpat",
-		category: 4,
+		category: "pedogod",
 		author: "Lorem ipsum",
 		genre: "Lorem",
 		rating: 5,
@@ -171,7 +171,7 @@ export const books = [
 	{
 		id: "8",
 		title: "Sed quis odio",
-		category: 5,
+		category: "relig",
 		author: "Lorem ipsum",
 		genre: "Lorem",
 		rating: 5,
@@ -188,7 +188,7 @@ export const books = [
 	{
 		id: "9",
 		title: "Nullam ullamcorper",
-		category: 6,
+		category: "ucheb",
 		author: "Lorem ipsum",
 		genre: "Lorem",
 		rating: 5,
@@ -205,7 +205,7 @@ export const books = [
 	{
 		id: "10",
 		title: "Donec lorem",
-		category: 7,
+		category: "komiks",
 		author: "Lorem ipsum",
 		genre: "Lorem",
 		rating: 5,
@@ -222,7 +222,7 @@ export const books = [
 	{
 		id: "11",
 		title: "Мухман в космосе",
-		category: 7,
+		category: "komiks",
 		author: "Павел@SSV",
 		genre: "Приключение",
 		rating: 5,

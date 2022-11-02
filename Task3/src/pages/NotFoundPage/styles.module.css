@@ -1,0 +1,7 @@
+.main {
+	background-color: #E9E9E9;
+	flex-grow: 1;
+	padding: 51px 40px;
+	display: flex;
+	justify-content: center;
+}

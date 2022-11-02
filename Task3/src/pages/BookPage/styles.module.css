@@ -3,6 +3,10 @@
 	flex-grow: 1;
 	padding: 51px 40px;
 }
+.main_notfound {
+	display: flex;
+	justify-content: center;
+}
 
 .panel {
 	display: grid;

@@ -7,7 +7,7 @@ export function BookList({ books })
 	return <div className={styles.root}>
 		{
 			books.map(book =>
-				<BookCard key={book.id} book={book} />
+				<BookCard key={book.id} book={book} link={true} />
 			)
 		}
 	</div>
