@@ -1,24 +1,27 @@
-import { useState } from "react"
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { BookCategories } from "../../components/BookCategories/BookCategories"
 import { BookList } from "../../components/BookList/BookList"
 import { Card } from "../../components/Card/Card"
+import { loadCategoriesIfNotExist } from "../../store/category/loadIfNotExist"
+import { selectCategories } from "../../store/category/selectors"
 import styles from "./styles.module.css"
 
 
-export function StorePage({ books, categories })
+export function StorePage()
 {
 	const { categoryId } = useParams();
-	const [activeCategory, setActiveCategory] = useState(categoryId || categories[0].id);
+	const categories = useSelector(selectCategories);
+	const dispatch = useDispatch()
+	const activeCategoryId = categoryId || categories[0]?.id || "";
+
+	useEffect(() => { dispatch(loadCategoriesIfNotExist) }, []);
 
 	return <main className={styles.main}>
 		<Card className={styles.panel}>
-			<BookCategories
-				categories={categories}
-				activeCategory={activeCategory}
-				setActiveCategory={setActiveCategory}
-			/>
+			<BookCategories activeCategoryId={activeCategoryId} />
 		</Card>
-		<BookList books={books.filter(book => book.category === activeCategory)} />
+		<BookList categoryId={activeCategoryId} />
 	</main>
 }

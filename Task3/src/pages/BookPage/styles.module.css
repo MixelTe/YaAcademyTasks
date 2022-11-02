@@ -3,7 +3,7 @@
 	flex-grow: 1;
 	padding: 51px 40px;
 }
-.main_notfound {
+.main_centered {
 	display: flex;
 	justify-content: center;
 }

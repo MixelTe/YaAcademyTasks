@@ -1,1 +1,2 @@
 npm add react-router-dom@6
+npm add redux react-redux @reduxjs/toolkit
