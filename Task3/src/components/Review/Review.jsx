@@ -4,13 +4,13 @@ import { Text } from "../Text/Text"
 import styles from "./styles.module.css"
 
 
-export function Comment({ comment })
+export function Review({ review })
 {
 	return <Card>
 		<div className={styles.header}>
-			<h1 className={styles.header__text}>{comment.author}</h1>
-			<Stars count={comment.rating} />
+			<h1 className={styles.header__text}>{review.author}</h1>
+			<Stars count={review.rating} />
 		</div>
-		<Text text={comment.text}/>
+		<Text text={review.text} />
 	</Card>
 }

@@ -18,7 +18,7 @@ export const books = [
 		rating: 4,
 		price: 250,
 		annotation: 'Не знаешь, что делать дальше? Сломала мозг в попытках ответить на вопрос, где заработать честной девушке-артефактору? Устала от однообразных предложений изготовить "что-нибудь для вечной любви"? Подумай о некромантии!\nПрисоединяйся к дружной компании черных магов и просто любителей гулять по ночным кладбищам. Ведь с ними твоя жизнь заиграет всеми оттенками черного. Вперед, Тесса Грей!',
-		comments: [
+		reviews: [
 			{
 				author: "Анна К.",
 				rating: 5,
@@ -45,7 +45,7 @@ export const books = [
 		rating: 4,
 		price: 350,
 		annotation: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.',
-		comments: [
+		reviews: [
 			{
 				author: "Lorem ipsum",
 				rating: 5,
@@ -72,7 +72,7 @@ export const books = [
 		rating: 4,
 		price: 250,
 		annotation: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.',
-		comments: [
+		reviews: [
 			{
 				author: "Lorem ipsum",
 				rating: 5,
@@ -99,7 +99,7 @@ export const books = [
 		rating: 4,
 		price: 250,
 		annotation: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.',
-		comments: [
+		reviews: [
 			{
 				author: "Lorem ipsum",
 				rating: 5,
@@ -126,7 +126,7 @@ export const books = [
 		rating: 5,
 		price: 250,
 		annotation: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.',
-		comments: [
+		reviews: [
 			{
 				author: "Lorem ipsum",
 				rating: 5,
@@ -143,7 +143,7 @@ export const books = [
 		rating: 5,
 		price: 250,
 		annotation: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.',
-		comments: [
+		reviews: [
 			{
 				author: "Lorem ipsum",
 				rating: 5,
@@ -160,7 +160,7 @@ export const books = [
 		rating: 5,
 		price: 250,
 		annotation: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.',
-		comments: [
+		reviews: [
 			{
 				author: "Lorem ipsum",
 				rating: 5,
@@ -177,7 +177,7 @@ export const books = [
 		rating: 5,
 		price: 250,
 		annotation: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.',
-		comments: [
+		reviews: [
 			{
 				author: "Lorem ipsum",
 				rating: 5,
@@ -194,7 +194,7 @@ export const books = [
 		rating: 5,
 		price: 250,
 		annotation: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.',
-		comments: [
+		reviews: [
 			{
 				author: "Lorem ipsum",
 				rating: 5,
@@ -211,7 +211,7 @@ export const books = [
 		rating: 5,
 		price: 250,
 		annotation: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.',
-		comments: [
+		reviews: [
 			{
 				author: "Lorem ipsum",
 				rating: 5,
@@ -228,7 +228,7 @@ export const books = [
 		rating: 5,
 		price: "100 500",
 		annotation: 'Встречайте увлекательные истории про Мухмана и его друзей',
-		comments: [
+		reviews: [
 			{
 				author: "Кубрик",
 				rating: 5,

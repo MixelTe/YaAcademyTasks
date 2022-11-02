@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { classnames } from "../../classnames"
 import { BookCard } from "../../components/BookCard/BookCard"
 import { Card } from "../../components/Card/Card"
-import { Comment } from "../../components/Comment/Comment"
+import { Review } from "../../components/Review/Review"
 import { Text } from "../../components/Text/Text"
 import styles from "./styles.module.css"
 
@@ -25,10 +25,10 @@ export function BookPage({ books })
 				<Text text={book.annotation} />
 			</Card>
 		</div>
-		<div className={styles.comments}>
+		<div className={styles.reviews}>
 			{
-				book.comments.map((comment, i) =>
-					<Comment key={i} comment={comment} />
+				book.reviews.map((review, i) =>
+					<Review key={i} review={review} />
 				)
 			}
 		</div>
