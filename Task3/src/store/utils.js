@@ -12,5 +12,5 @@ export function prepareData(items)
 
 export async function Wait()
 {
-	return new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 200 + 200)));
+	return new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 500 + 1000)));
 }

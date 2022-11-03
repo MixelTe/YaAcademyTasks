@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import { classnames } from "../../classnames"
 import { BookCard } from "../../components/BookCard/BookCard"
 import { Card } from "../../components/Card/Card"
+import { Placeholder } from "../../components/Placeholder/Placeholder"
 import { Review } from "../../components/Review/Review"
 import { Text } from "../../components/Text/Text"
 import { loadBookById } from "../../store/book/loadIfNotExist"
@@ -20,10 +21,7 @@ export function BookPage()
 
 	useEffect(() => { dispatch(loadBookById(bookId)) }, [bookId, dispatch]);
 
-	if (bookIsLoading)
-		return <main className={classnames(styles.main, styles.main_centered)}>
-			<h1>Загрузка книги...</h1>
-		</main>
+	if (bookIsLoading) return CreatePaceholder();
 
 	if (!book)
 		return <main className={classnames(styles.main, styles.main_centered)}>
@@ -42,6 +40,27 @@ export function BookPage()
 			{
 				book.reviews.map((reviewId, i) =>
 					<Review key={i} reviewId={reviewId} />
+				)
+			}
+		</div>
+	</main>
+}
+
+function CreatePaceholder()
+{
+	return <main className={styles.main}>
+		<div className={styles.panel}>
+			<Placeholder height="235px" rounded />
+			<Card>
+				<h1 className={styles.annotation__title}>Аннотация</h1>
+				<Placeholder height="4em" style={({ marginBottom: "1em" })} />
+				<Placeholder height="4em" />
+			</Card>
+		</div>
+		<div className={styles.reviews}>
+			{
+				new Array(3).fill().map((_, i) =>
+					<Placeholder key={i} height="100px" rounded />
 				)
 			}
 		</div>

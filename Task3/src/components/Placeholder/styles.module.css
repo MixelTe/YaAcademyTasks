@@ -1,0 +1,30 @@
+.inner {
+	background-color: gray;
+	color: transparent;
+	width: var(--data-width);
+	height: var(--data-height);
+
+	background-image: linear-gradient(70deg,
+			gray calc(var(--data-w) / 2 - 100px),
+			lightgray calc(var(--data-w) / 2),
+			gray calc(var(--data-w) / 2 + 100px));
+	background-size: calc(var(--data-w) + 400px) var(--data-h);
+	background-position: calc(0px - var(--data-x)) calc(0px - var(--data-y));
+	background-position-x: calc(0px - var(--data-w) / 2 - 50px - var(--data-x));
+
+	animation: anim 2s ease-in-out 0s infinite;
+}
+
+@keyframes anim {
+	0% {
+		background-position-x: calc(0px - var(--data-w) / 2 - 50px - var(--data-x));
+	}
+
+	100% {
+		background-position-x: calc(var(--data-w) + 400px - var(--data-w) / 2 - 50px - var(--data-x));
+	}
+}
+
+.inner_rounded {
+	border-radius: 8px;
+}
