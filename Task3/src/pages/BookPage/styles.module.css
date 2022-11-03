@@ -29,3 +29,14 @@
 	flex-direction: column;
 	gap: 16px;
 }
+
+
+@media screen and (max-width: 800px) {
+	.main {
+		padding: 25px 20px;
+	}
+	.panel {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+	}
+}

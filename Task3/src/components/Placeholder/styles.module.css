@@ -5,10 +5,10 @@
 	height: var(--data-height);
 
 	background-image: linear-gradient(70deg,
-			gray calc(var(--data-w) / 2 - 100px),
-			lightgray calc(var(--data-w) / 2),
-			gray calc(var(--data-w) / 2 + 100px));
-	background-size: calc(var(--data-w) + 400px) var(--data-h);
+			gray calc((var(--data-w) + 300px) / 2 - 100px),
+			lightgray calc((var(--data-w) + 300px) / 2),
+			gray calc((var(--data-w) + 300px) / 2 + 100px));
+	background-size: calc(var(--data-w) + 600px) var(--data-h);
 	background-position: calc(0px - var(--data-x)) calc(0px - var(--data-y));
 	background-position-x: calc(0px - var(--data-w) / 2 - 50px - var(--data-x));
 
@@ -17,7 +17,7 @@
 
 @keyframes anim {
 	0% {
-		background-position-x: calc(0px - var(--data-w) / 2 - 50px - var(--data-x));
+		background-position-x: calc(0px - var(--data-w) / 2 - 250px - var(--data-x));
 	}
 
 	100% {

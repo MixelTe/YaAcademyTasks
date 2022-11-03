@@ -56,3 +56,15 @@
 .countInput_bottom {
 	align-items: flex-end;
 }
+
+
+@media screen and (max-width: 800px) {
+	.root {
+		flex-direction: column;
+		gap: 15px;
+		align-items: center;
+	}
+	.content {
+		width: 100%;
+	}
+}
