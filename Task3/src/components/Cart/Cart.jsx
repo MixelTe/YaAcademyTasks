@@ -18,6 +18,7 @@ export function Cart({ className })
 				cart.map(item => <CartItem key={item.bookId} item={item} />)
 			}
 		</ul>
+		<div className={styles.spacer}></div>
 		<div className={styles.footer}>
 			<div className={styles.total}>
 				Итого: {tolal} &#x20bd;
