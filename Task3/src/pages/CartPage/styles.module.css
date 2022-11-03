@@ -1,5 +1,16 @@
 .main {
 	background-color: #E9E9E9;
 	flex-grow: 1;
-	padding: 51px 40px;
+	padding: 51px 40px 0 40px;
+	display: grid;
+	grid-template-columns: 387px auto;
+	gap: 20px;
+	max-height: calc(100% - 67px);
+	box-sizing: border-box;
+}
+
+.panel {
+	min-height: 438px;
+	max-height: calc(100% - 55px);
+	align-self: flex-start;
 }

@@ -71,7 +71,7 @@ export const books = [
 	},
 	{
 		id: "5",
-		title: "Lorem ipsum dolor",
+		title: "Книга с очень длинным названием, для проверки верстки",
 		categoryId: "nehud-lit",
 		author: "Lorem ipsum",
 		genre: "Lorem",
@@ -154,7 +154,7 @@ export const books = [
 		author: "Павел@SSV",
 		genre: "Приключение",
 		rating: 5,
-		price: "100 500",
+		price: 100_500,
 		annotation: "Встречайте увлекательные истории про Мухмана и его друзей",
 		reviews: [
 			"19",
@@ -400,4 +400,15 @@ export const users = [
 		id: "23",
 		name: "Шур-шуль"
 	}
+]
+
+
+export const cart = [
+	{ bookId: "1", count: 1 },
+	{ bookId: "2", count: 1 },
+	{ bookId: "3", count: 1 },
+	{ bookId: "4", count: 1 },
+	{ bookId: "5", count: 4 },
+	{ bookId: "10", count: 3 },
+	{ bookId: "11", count: 2 },
 ]
