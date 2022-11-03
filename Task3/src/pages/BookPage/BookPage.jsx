@@ -18,7 +18,7 @@ export function BookPage()
 	const book = useSelector(selectBookById(bookId));
 	const bookIsLoading = useSelector(selectIsBookLoading);
 
-	useEffect(() => { dispatch(loadBookById(bookId)) }, [bookId]);
+	useEffect(() => { dispatch(loadBookById(bookId)) }, [bookId, dispatch]);
 
 	if (bookIsLoading)
 		return <main className={classnames(styles.main, styles.main_centered)}>

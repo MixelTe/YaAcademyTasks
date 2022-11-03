@@ -15,7 +15,7 @@ export function Review({ reviewId })
 	const review = useSelector(selectReviewById(reviewId));
 	const reviewIsLoading = useSelector(selectIsReviewLoading);
 
-	useEffect(() => { dispatch(loadReviewById(reviewId)) }, [reviewId]);
+	useEffect(() => { dispatch(loadReviewById(reviewId)) }, [reviewId, dispatch]);
 
 	if (reviewIsLoading) return <Card>
 		<div className={styles.header}>

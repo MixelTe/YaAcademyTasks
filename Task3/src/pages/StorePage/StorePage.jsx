@@ -16,7 +16,7 @@ export function StorePage()
 	const dispatch = useDispatch()
 	const activeCategoryId = categoryId || categories[0]?.id || "";
 
-	useEffect(() => { dispatch(loadCategoriesIfNotExist) }, []);
+	useEffect(() => { dispatch(loadCategoriesIfNotExist) }, [dispatch]);
 
 	return <main className={styles.main}>
 		<Card className={styles.panel}>

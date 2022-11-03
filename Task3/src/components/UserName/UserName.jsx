@@ -11,7 +11,7 @@ export function UserName({ userId, className })
 	const user = useSelector(selectUserById(userId));
 	const userIsLoading = useSelector(selectIsReviewLoading);
 
-	useEffect(() => { dispatch(loadUserById(userId)) }, [userId]);
+	useEffect(() => { dispatch(loadUserById(userId)) }, [userId, dispatch]);
 
 	if (userIsLoading) return <h1 className={className}>Загрузка...</h1>
 	if (!user) return <h1 className={className}>Неизвестный пользователь</h1>

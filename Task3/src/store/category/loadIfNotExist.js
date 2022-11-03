@@ -5,7 +5,7 @@ import { selectCategories } from "./selectors";
 
 export async function loadCategoriesIfNotExist(dispatch, getState)
 {
-	if (selectCategories(getState())?.length != 0) return;
+	if (selectCategories(getState())?.length !== 0) return;
 
 	dispatch(categorySlice.actions.startLoading());
 	await Wait();

@@ -1,7 +1,7 @@
 import { bookSlice } from ".";
 import { books } from "../../constants/mock";
 import { prepareData, Wait } from "../utils";
-import { selectBookById, selectBookModule, selectBooks } from "./selectors";
+import { selectBookById, selectBookModule } from "./selectors";
 
 export const loadBooksIfNotExist = (categoryId) => async (dispatch, getState) =>
 {

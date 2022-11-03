@@ -11,7 +11,7 @@ export function BookList({ categoryId })
 	const dispatch = useDispatch();
 	const books = useSelector(selectBooksByCategoryId(categoryId));
 
-	useEffect(() => { dispatch(loadBooksIfNotExist(categoryId)) }, [categoryId]);
+	useEffect(() => { dispatch(loadBooksIfNotExist(categoryId)) }, [categoryId, dispatch]);
 
 	return <div className={styles.root}>
 		{
