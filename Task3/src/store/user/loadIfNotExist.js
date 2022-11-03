@@ -7,9 +7,9 @@ export const loadUserById = (id) => async (dispatch, getState) =>
 {
 	if (selectUserById(id)(getState())) return;
 
-	dispatch(userSlice.actions.startLoading());
+	dispatch(userSlice.actions.startLoading(id));
 	await Wait();
-	const user = users.filter(user => user.id === id);
-	if (user) dispatch(userSlice.actions.successLoading(prepareData(user)));
-	else dispatch(userSlice.actions.failLoading());
+	const user = users.filter(user => user.id === id)[0];
+	if (user) dispatch(userSlice.actions.successLoading(user));
+	else dispatch(userSlice.actions.failLoading(id));
 }

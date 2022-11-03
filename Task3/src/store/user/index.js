@@ -6,16 +6,17 @@ export const userSlice = createSlice({
 	initialState: {
 		entities: {},
 		ids: [],
-		status: Statuses.idle,
+		statusByUser: {},
 	},
 	reducers: {
-		startLoading: (state, action) => { state.status = Statuses.inProgress; },
+		startLoading: (state, action) => { state.statusByUser[action.payload] = Statuses.inProgress; },
 		successLoading: (state, action) =>
 		{
 			state.status = Statuses.success;
-			state.entities = { ...state.entities, ...action.payload.entities };
-			state.ids = Array.from(new Set([...state.ids, ...action.payload.ids]));
+			state.entities[action.payload.id] = action.payload;
+			state.ids.push(action.payload.id);
+			state.statusByUser[action.payload.id] = Statuses.success;
 		},
-		failLoading: (state, action) => { state.status = Statuses.failed; }
+		failLoading: (state, action) => { state.statusByUser[action.payload] = Statuses.failed; }
 	}
 });

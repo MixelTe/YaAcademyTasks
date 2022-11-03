@@ -13,7 +13,7 @@ export function Review({ reviewId })
 {
 	const dispatch = useDispatch();
 	const review = useSelector(selectReviewById(reviewId));
-	const reviewIsLoading = useSelector(selectIsReviewLoading);
+	const reviewIsLoading = useSelector(selectIsReviewLoading(reviewId));
 
 	useEffect(() => { dispatch(loadReviewById(reviewId)) }, [reviewId, dispatch]);
 
