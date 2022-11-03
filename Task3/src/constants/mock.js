@@ -31,7 +31,7 @@ export const books = [
 		author: "Блэк Холли",
 		genre: "Фэнтези",
 		rating: 4,
-		price: 350,
+		price: 250,
 		annotation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugit officia distinctio quibusdam dolorem in iusto nulla sequi enim.",
 		reviews: [
 			"4",
@@ -400,15 +400,4 @@ export const users = [
 		id: "23",
 		name: "Шур-шуль"
 	}
-]
-
-
-export const cart = [
-	{ bookId: "1", count: 1 },
-	{ bookId: "2", count: 1 },
-	{ bookId: "3", count: 1 },
-	{ bookId: "4", count: 1 },
-	{ bookId: "5", count: 4 },
-	{ bookId: "10", count: 3 },
-	{ bookId: "11", count: 2 },
 ]

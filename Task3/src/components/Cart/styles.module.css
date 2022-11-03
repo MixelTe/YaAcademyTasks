@@ -30,29 +30,6 @@
 	border-radius: 4px;
 }
 
-.cart__item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 16px;
-}
-
-.cart__text {
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 22px;
-}
-
-.cart__price {
-	font-style: normal;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 22px;
-	flex-shrink: 0;
-	margin-left: 6px;
-}
-
 .footer {
 	display: flex;
 	justify-content: space-between;

@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { loadBookById, loadBooksIfNotExist } from "../../store/book/loadIfNotExist";
+import { loadBooksIfNotExist } from "../../store/book/loadIfNotExist";
 import { selectBooksByCategoryId } from "../../store/book/selectors"
+import { selectCartBooks } from "../../store/cart/selectors";
 import { BookCard } from "../BookCard/BookCard"
 import styles from "./styles.module.css"
-
-import { cart } from "../../constants/mock";
 
 
 export function BookList({ categoryId, displayCart })
@@ -16,8 +15,7 @@ export function BookList({ categoryId, displayCart })
 
 	useEffect(() =>
 	{
-		const loader = displayCart ? loadCartBooks : loadBooksIfNotExist(categoryId);
-		dispatch(loader);
+		if (!displayCart) dispatch(loadBooksIfNotExist(categoryId));
 	}, [categoryId, displayCart, dispatch]);
 
 	return <div className={styles.root}>
@@ -27,14 +25,4 @@ export function BookList({ categoryId, displayCart })
 			)
 		}
 	</div>
-}
-
-function selectCartBooks(state)
-{
-	const books = cart.map(item => item.bookId);
-	return Object.values(state.book.entities).filter(book => books.indexOf(book.id) >= 0);
-}
-function loadCartBooks(dispatch, getState)
-{
-	cart.forEach(item => loadBookById(item.bookId)(dispatch, getState));
 }

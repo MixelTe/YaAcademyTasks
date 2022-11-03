@@ -25,7 +25,7 @@ export function BookCard({ book, inputOnBottom, link })
 			<div className={styles.price}>{book.price} &#x20bd;</div>
 		</div>
 		<div className={classnames(styles.countInput, inputOnBottom ? styles.countInput_bottom : "")}>
-			<CountInput />
+			<CountInput bookId={book.id} />
 		</div>
 	</Card>
 }
