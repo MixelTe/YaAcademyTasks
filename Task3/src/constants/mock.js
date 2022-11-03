@@ -98,7 +98,7 @@ export const books = [
 	{
 		id: "7",
 		title: "Maecenas volutpat",
-		categoryId: "pedogod",
+		categoryId: "pereod",
 		author: "Lorem ipsum",
 		genre: "Lorem",
 		rating: 5,
