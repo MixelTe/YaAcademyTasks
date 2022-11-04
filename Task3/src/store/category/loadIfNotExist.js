@@ -1,11 +1,12 @@
 import { categorySlice } from ".";
 import { categories } from "../../constants/mock";
 import { prepareData, serverIP, Wait } from "../utils";
-import { selectCategories } from "./selectors";
+import { selectCategories, selectIsCategoryLoading } from "./selectors";
 
 export async function loadCategoriesIfNotExist(dispatch, getState)
 {
-	if (selectCategories(getState())?.length !== 0) return;
+	if (selectCategories(getState()).length !== 0) return;
+	if (selectIsCategoryLoading(getState())) return;
 
 	dispatch(categorySlice.actions.startLoading());
 	let data;

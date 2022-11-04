@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { loadBooksIfNotExist } from "../../store/book/loadIfNotExist";
-import { selectBooksByCategoryId, selectIsBookLoading } from "../../store/book/selectors"
+import { selectBooksByCategoryId, selectIsBookNotLoaded } from "../../store/book/selectors"
 import { selectCartBooks } from "../../store/cart/selectors";
 import { BookCard } from "../BookCard/BookCard"
 import { Placeholder } from "../Placeholder/Placeholder";
@@ -13,7 +13,7 @@ export function BookList({ categoryId, displayCart })
 	const dispatch = useDispatch();
 	const selector = displayCart ? selectCartBooks : selectBooksByCategoryId(categoryId);
 	const books = useSelector(selector);
-	const bookIsLoading = useSelector(selectIsBookLoading);
+	const bookIsLoading = useSelector(selectIsBookNotLoaded);
 
 	useEffect(() =>
 	{

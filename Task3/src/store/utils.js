@@ -1,4 +1,4 @@
-const useServer = true
+const useServer = true;
 export const serverIP = useServer ? "http://localhost:3001" : null;
 
 export function prepareData(items)

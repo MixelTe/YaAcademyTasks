@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { classnames } from "../../classnames";
-import { selectCategories, selectIsCategoryLoading } from "../../store/category/selectors";
+import { selectCategories, selectIsCategoryNotLoaded } from "../../store/category/selectors";
 import { Placeholder } from "../Placeholder/Placeholder";
 import styles from "./styles.module.css"
 
@@ -9,7 +9,7 @@ import styles from "./styles.module.css"
 export function BookCategories({ activeCategoryId })
 {
 	const categories = useSelector(selectCategories);
-	const categoriesIsLoading = useSelector(selectIsCategoryLoading);
+	const categoriesIsLoading = useSelector(selectIsCategoryNotLoaded);
 
 	if (categoriesIsLoading) return CreatePlaceholder();
 

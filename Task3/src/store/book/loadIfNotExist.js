@@ -1,11 +1,12 @@
 import { bookSlice } from ".";
 import { books } from "../../constants/mock";
 import { prepareData, serverIP, Wait } from "../utils";
-import { selectBookById, selectBookModule } from "./selectors";
+import { selectBookById, selectBookModule, selectIsBookLoading } from "./selectors";
 
 export const loadBooksIfNotExist = (categoryId) => async (dispatch, getState) =>
 {
 	if (selectBookModule(getState())?.categoryIds?.indexOf(categoryId) >= 0) return;
+	if (selectIsBookLoading(getState())) return;
 
 	dispatch(bookSlice.actions.startLoading());
 
@@ -29,6 +30,7 @@ export const loadBooksIfNotExist = (categoryId) => async (dispatch, getState) =>
 export const loadBookById = (id) => async (dispatch, getState) =>
 {
 	if (selectBookById(id)(getState())) return;
+	if (selectIsBookLoading(getState())) return;
 
 	dispatch(bookSlice.actions.startLoading());
 

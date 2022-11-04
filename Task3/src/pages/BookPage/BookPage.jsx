@@ -8,7 +8,7 @@ import { Placeholder } from "../../components/Placeholder/Placeholder"
 import { Review } from "../../components/Review/Review"
 import { Text } from "../../components/Text/Text"
 import { loadBookById } from "../../store/book/loadIfNotExist"
-import { selectBookById, selectIsBookLoading } from "../../store/book/selectors"
+import { selectBookById, selectIsBookNotLoaded } from "../../store/book/selectors"
 import styles from "./styles.module.css"
 
 
@@ -17,7 +17,7 @@ export function BookPage()
 	const dispatch = useDispatch();
 	const { bookId } = useParams();
 	const book = useSelector(selectBookById(bookId));
-	const bookIsLoading = useSelector(selectIsBookLoading);
+	const bookIsLoading = useSelector(selectIsBookNotLoaded);
 
 	useEffect(() => { dispatch(loadBookById(bookId)) }, [bookId, dispatch]);
 
