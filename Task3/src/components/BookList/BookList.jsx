@@ -17,7 +17,7 @@ export function BookList({ categoryId, displayCart })
 
 	useEffect(() =>
 	{
-		if (!displayCart) dispatch(loadBooksIfNotExist(categoryId));
+		if (!displayCart && categoryId) dispatch(loadBooksIfNotExist(categoryId));
 	}, [categoryId, displayCart, dispatch]);
 
 	if (bookIsLoading) return CreatePlaceholder();
