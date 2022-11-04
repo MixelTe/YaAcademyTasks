@@ -1,4 +1,5 @@
 import { Api, Listener } from "./api";
+import { Row } from "./database";
 
 
 Api.addListener("/", async req =>
@@ -27,14 +28,14 @@ Api.addListener("/book?id", SqlListener(
 	FROM Book as b
 	INNER JOIN Genre as g on b.genreId = g.id
 	WHERE b.id = ?
-`, ["id"], true));
+`, ["id"], true, processBook));
 
 Api.addListener("/book?categoryId", SqlListener(
 	`SELECT b.id, b.title, b.categoryId, b.author, g.title as genre, b.rating, b.price, b.annotation
 	FROM Book as b
 	INNER JOIN Genre as g on b.genreId = g.id
 	WHERE b.categoryId = ?
-`, ["categoryId"]));
+`, ["categoryId"], false, processBook));
 
 
 Api.addListener("/book", SqlListener(
@@ -65,7 +66,7 @@ Api.addListener("/user", SqlListener(
 `, []));
 
 
-function SqlListener(sql: string, queryParams: string[], first = false): Listener
+function SqlListener(sql: string, queryParams: string[], first = false, processData?: (res: Row | Row[]) => Promise<any | null | undefined>): Listener
 {
 	return async req =>
 	{
@@ -89,7 +90,31 @@ function SqlListener(sql: string, queryParams: string[], first = false): Listene
 		if (res === null) return req.setStatus(500);
 		if (res === undefined) return req.setStatus(404);
 
+		if (processData)
+		{
+			res = await processData(res);
+			if (res === null) return req.setStatus(500);
+			if (res === undefined) return req.setStatus(404);
+		}
+
 		req.setStatus(200);
 		req.write(JSON.stringify(res, undefined, 4));
 	}
+}
+
+async function processBook(res: Row | Row[]): Promise<any | null | undefined>
+{
+	const books = <any[]>(res instanceof Array ? res : [res]);
+	for (const book of books)
+	{
+		const res = await Api.db.all(`
+		SELECT reviewId
+		FROM BookReview
+		WHERE bookId = ?
+		ORDER BY reviewId
+		`, [book.id]);
+		if (res === null) return null;
+		book.reviews = res.map(row => row.reviewId);
+	}
+	return res instanceof Array ? books : books[0];
 }

@@ -40,7 +40,7 @@ export class DataBase
 	}
 }
 
-interface Row
+export interface Row
 {
 	[column: string]: string,
 }
