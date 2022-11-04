@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/YaAcademyTasks/Task3/wwwroot/static/css/main.63193fc3.css",
+    "main.js": "/YaAcademyTasks/Task3/wwwroot/static/js/main.41d58870.js",
+    "static/media/star.svg": "/YaAcademyTasks/Task3/wwwroot/static/media/star.df68214913488c5082a5b7b485834f24.svg",
+    "static/media/shoppingCart.svg": "/YaAcademyTasks/Task3/wwwroot/static/media/shoppingCart.56f7c5dd5928b21540812297d7d6a514.svg",
+    "static/media/star_filled.svg": "/YaAcademyTasks/Task3/wwwroot/static/media/star_filled.f77aa89dd8be0305bbdb4daae0463b3f.svg",
+    "static/media/plus.svg": "/YaAcademyTasks/Task3/wwwroot/static/media/plus.843e846a4dcf48af1798.svg",
+    "index.html": "/YaAcademyTasks/Task3/wwwroot/index.html",
+    "static/media/minus.svg": "/YaAcademyTasks/Task3/wwwroot/static/media/minus.14dbb1539854042e6107.svg",
+    "main.63193fc3.css.map": "/YaAcademyTasks/Task3/wwwroot/static/css/main.63193fc3.css.map",
+    "main.41d58870.js.map": "/YaAcademyTasks/Task3/wwwroot/static/js/main.41d58870.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63193fc3.css",
+    "static/js/main.41d58870.js"
+  ]
+}
